@@ -8,7 +8,7 @@ On my MacBook device I have used `ioreg -p IOUSB -l` after plugging in a device 
 After finding those you must go to ESP32 board package directory and find boards.txt (https://github.com/espressif/arduino-esp32/blob/master/boards.txt). Find the line that starts with `esp32s3.name=ESP32S3 Dev Module`. There you must modify the PID and VID values with your actual VID and PID values that you collected as mentioned above. Replace `0xXXXX` with your VID and `0xYYYY` with your PID.
 
 ## ⚠️ ALTERNATIVELY JUST DOWNLOAD THE "boards.txt" FILE ON THIS REPO
-I have already changed the values for the S3 model we use which is "ESP-32-WROOM-1 V1.3. You can just download the boards.txt and pack the whole directory after compressing. The details are as follows:
+I have already changed the values for the S3 model we use which is "ESP-32-WROOM-1 V1.3. You can just download the boards.txt and pack the whole directory after compressing. **I have changed other board PID and VID values to 0x1111!!!!!!** The details are as follows:
 
 ```bash
     +-o USB JTAG/serial debug unit@14300000  <class AppleUSBDevice, id 0x1000011e6, registered, matched, active, busy 0 (2 ms), retain 16>
