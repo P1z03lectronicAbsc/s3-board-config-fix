@@ -53,3 +53,9 @@ After modifying, you'll need to compress the entire board package directory into
 Then you can create a new repository on GitHub, upload the ZIP archive to this repository, then click on the ZIP file inside the repository, then click the "Download" button. Copy the link.
 
 Now you must go to the Arduino IDE, go to `file` -> `preferences`. in the "Additional Boards Manager URLs" field, click on the icon on the right to open a window where you can insert new lines. Add the direct link to your ZIP file and click OK. Go to Tools -> Board -> Boards Manager. then search for ESP32. your custom package should appear in the list. Click "Install". after it installs you are good to go.
+
+
+# Important Note:
+Upon further investigation, we've found that these "random board names" all share the same VID and PID values. The real issue isn't the wrong VID and PID for the ESP32 S3, but that multiple boards have the same values.
+
+A temporary solution is to assign random values to the VID and PID entries for all boards other than the one you primarily use. This ensures the correct auto-detection of your board. However, always remember to revert these changes if you switch to a long-term development on another board. Otherwise, boards like the u-blox NORA-W10 s3 won't be auto-detected.
