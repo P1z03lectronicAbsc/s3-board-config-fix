@@ -1,4 +1,7 @@
 # A guide on fixing the Board Confugiration for the ESP32 s3
+2nd edit: This problem was thankfully fixed on Arduino IDE 2.2! From now on you can use the "edit" button for the board names and it will remember your preferences.
+
+
 This guide is for fixing the Arduino IDE if it shows up random boards whenever you connect it through the USB Type C.
 
 You can just force Arduino IDE to recognise your board by locating your *Boards Configuration File*, putting in your VID and PID values, repackage and host the configurations and Point the Arduino IDE to your custom board manager URL.
